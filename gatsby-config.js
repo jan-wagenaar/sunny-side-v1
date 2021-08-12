@@ -8,6 +8,8 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
+    "gatsby-background-image",
     {
       resolve: "gatsby-source-filesystem",
       options: {
