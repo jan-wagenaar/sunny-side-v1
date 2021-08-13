@@ -5,21 +5,31 @@ import basetheme from './theme';
 import GlobalStyle from './globalstyle';
 import NavBar from './navbar';
 import Footer from './footer';
+import favicon32 from "../images/favicon32.png";
 
 
 const Page = ({children}) => {
     return (
         <React.Fragment>
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Title</title>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-                <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet"></link>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-                <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet"></link>
-            </Helmet>
+            <Helmet
+            title={"Test"}
+            meta={[
+              {
+                name: "description",
+                content: "Alex Trost - Front-End Web Developer and Graphic Designer",
+              },
+              {
+                name: "keywords",
+                content: "frontend, developer",
+              },
+            ]}
+            link={[
+                { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` },
+                { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+                { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'},
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap' },
+                { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap' }
+            ]} />
             <ThemeProvider theme={basetheme}>
                 <GlobalStyle />
                 <NavBar />

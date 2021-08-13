@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const GridItem = styled.section`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

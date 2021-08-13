@@ -1,7 +1,7 @@
 import React from 'react';
-import { StaticImage } from "gatsby-plugin-image";
 import styled from 'styled-components';
 import { ButtonBase } from './button';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const FooterContent = styled.footer`
     display: flex;
@@ -24,16 +24,20 @@ const FooterLinkItem = styled.li`
     align-items: center;
 `;
 
-const FotterLinkButton = styled(ButtonBase)`
+const FooterLogo=styled(StaticImage)`
+    color:  ${props => props.theme.colors.neutral.darkerblue}
+`;
+
+const FooterLinkButton = styled(ButtonBase)`
     color: ${props => props.theme.colors.primary.darkcyan}
 `;
 
 const Footer = () => {
     return (
         <FooterContent>
-            <h4>sunny side</h4>
+            <FooterLogo alt="" src="../images/icon.svg" />
             <FooterLinks>
-                <FooterLinkItem><FotterLinkButton to="#">About</FotterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#">About</FooterLinkButton></FooterLinkItem>
             </FooterLinks>
         </FooterContent>
     )

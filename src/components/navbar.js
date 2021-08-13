@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ButtonLink, Button } from './button';
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from 'gatsby';
 
 const Header = styled.header`
     display: flex;
@@ -28,7 +29,7 @@ const LinkItem = styled.li`
 const NavBar = () => {
     return (
         <Header>
-            <StaticImage src="../images/logo.svg" />
+            <Link to="/"><StaticImage alt="Logo" src="../images/icon.svg" /></Link> 
             <nav>
                 <Links>
                     <LinkItem><ButtonLink to="/contact">About</ButtonLink></LinkItem>

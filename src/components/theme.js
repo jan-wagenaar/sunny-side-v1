@@ -13,10 +13,10 @@ const basetheme = {
             darkcyan: 'hsl(167, 40%, 24%)',
             darkblue: 'hsl(198, 62%, 26%)',
             cyan: 'hsl(168, 34%, 41%)',
-            footer: 'hsl(166,44,69)',
+            footer: 'hsl(166,44%,69%)',
         },
         neutral: {
-            body: 'hsl(35,67,86)',
+            body: 'hsl(25,100%,98%)',
             darkerblue: 'hsl(212, 27%, 19%)',
             grayblue: 'hsl(210, 4%, 67%)',
             darkgrayblue: 'hsl(232, 10%, 55%)',

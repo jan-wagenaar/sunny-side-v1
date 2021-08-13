@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Sunny Side v1",
+    siteUrl: "https://jan-wagenaar.nl",
+    title: "Sunny side",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -19,4 +19,5 @@ module.exports = {
       __key: "images",
     },
   ],
+  pathPrefix: `/work/gatsby-agency`,
 };
