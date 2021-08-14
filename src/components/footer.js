@@ -13,6 +13,7 @@ const FooterContent = styled.footer`
     display: flex;
     flex-flow: column;
     align-items: center;
+    grid-area: footer;
     padding: ${props => props.theme.spacing.l};
     background-color: ${props => props.theme.colors.primary.footer};
 `;

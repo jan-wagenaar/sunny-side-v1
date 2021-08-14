@@ -3,15 +3,18 @@ import styled from 'styled-components';
 const GridItem = styled.section`
     position: relative;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    flex: 1 50%;
-    height: 50vw;
+    order: ${props => props.gridOrder};
     box-sizing: border-box;
+    height: ${props => props.height || '100vw'};
     
-    ${({ color }) => color && `
-    background-color: ${color};
-  `}
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      & {
+        height: 50vw;
+      }
+    }
 `;
 
 export default GridItem;

@@ -20,6 +20,25 @@ const ButtonLink = styled(ButtonBase)`
   }
 `;
 
+const ButtonSecondary = styled(ButtonBase)`
+  position: relative;
+  padding: ${props => props.theme.spacing.xxs};
+  font-family: ${props => props.theme.typography.font.fraunces};
+  color: ${props => props.theme.colors.neutral.darkerblue};
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: 2px;
+    border-radius: ${props => props.theme.shape.rounded};
+    background-color: ${props => props.theme.colors.primary.red};
+    z-index: -1;
+  }
+`;
+
 const Button = styled(ButtonBase)`
   padding: ${props => props.theme.spacing.m} ${props => props.theme.spacing.l};
   color: ${props => props.theme.colors.neutral.white};
@@ -33,4 +52,4 @@ const Button = styled(ButtonBase)`
 `;
 
 
-export { ButtonBase, ButtonLink, Button };
+export { ButtonBase, ButtonLink, Button, ButtonSecondary };

@@ -39,6 +39,7 @@ const Hero = styled(BackgroundSection)`
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  grid-area: header;
   width: 100%;
   min-height: 50vw;
   box-sizing: border-box;
