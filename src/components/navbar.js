@@ -19,6 +19,10 @@ const Links = styled.ul`
     align-items: center;
     margin: 0;
     list-style-type: none;
+
+    @media only screen and (max-width: ${props => props.theme.breakpoints.sm}) {
+        display: none;
+    }
 `;
 
 const LinkItem = styled.li`

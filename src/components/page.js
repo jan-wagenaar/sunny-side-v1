@@ -12,6 +12,9 @@ const Page = ({children}) => {
     return (
         <React.Fragment>
             <Helmet
+            htmlAttributes={{
+              lang: 'en',
+            }}
             title={"Test"}
             meta={[
               {

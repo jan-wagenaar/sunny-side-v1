@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ButtonBase } from './button';
-import { StaticImage } from 'gatsby-plugin-image';
+import Logo from './logo';
+import IconFacebook from '../images/svg/icon-facebook.svg';
+import IconInstagram from '../images/svg/icon-instagram.svg';
+import IconTwitter from '../images/svg/icon-twitter.svg';
+import IconPinterest from '../images/svg/icon-pinterest.svg';
+
+
 
 const FooterContent = styled.footer`
     display: flex;
@@ -14,7 +20,7 @@ const FooterContent = styled.footer`
 const FooterLinks = styled.ul`
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: ${props => props.theme.spacing.m} 0 ${props => props.theme.spacing.l} 0;
     padding: 0;
     list-style-type: none;
 `;
@@ -22,22 +28,39 @@ const FooterLinks = styled.ul`
 const FooterLinkItem = styled.li`
     display: flex;
     align-items: center;
+    padding: ${props => props.theme.spacing.m};
 `;
 
-const FooterLogo=styled(StaticImage)`
-    color:  ${props => props.theme.colors.neutral.darkerblue}
+const FooterLogo=styled(Logo)`
+    margin: ${props => props.theme.spacing.m};
+
+    & path {
+        fill: ${props => props.theme.colors.primary.darkcyan};
+    }
 `;
 
 const FooterLinkButton = styled(ButtonBase)`
-    color: ${props => props.theme.colors.primary.darkcyan}
+    color:  ${props => props.theme.colors.primary.cyan};
+
+    & path {
+        fill: ${props => props.theme.colors.primary.darkcyan};
+    }
 `;
 
 const Footer = () => {
     return (
         <FooterContent>
-            <FooterLogo alt="" src="../images/icon.svg" />
+            <FooterLogo />
             <FooterLinks>
                 <FooterLinkItem><FooterLinkButton to="#">About</FooterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#">Services</FooterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#">Projecten</FooterLinkButton></FooterLinkItem>
+            </FooterLinks>
+            <FooterLinks>
+                <FooterLinkItem><FooterLinkButton to="#"><IconFacebook /></FooterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#"><IconInstagram /></FooterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#"><IconTwitter /></FooterLinkButton></FooterLinkItem>
+                <FooterLinkItem><FooterLinkButton to="#"><IconPinterest /></FooterLinkButton></FooterLinkItem>
             </FooterLinks>
         </FooterContent>
     )
