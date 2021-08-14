@@ -41,19 +41,30 @@ const Hero = styled(BackgroundSection)`
   align-items: center;
   grid-area: header;
   width: 100%;
-  min-height: 50vw;
+  height: ${props => props.height || '80vh'};
   box-sizing: border-box;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+    
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    & {
+      height: 50vw;
+    }
+  }
 `
 
 const HeroTypography = styled.h1`
   margin-bottom: ${props => props.theme.spacing.xl};
   font-family: ${props => props.theme.typography.font.fraunces};
-  font-size:  ${props => props.theme.typography.size.header1};
   color: ${props => props.theme.colors.neutral.white};
   text-transform: uppercase;
+
+//   @media (max-width: ${props => props.theme.breakpoints.xs}) {
+//     & {
+//         font-size: 12px;
+//     }
+// }
 `;
 
 export { Hero, HeroTypography } ;

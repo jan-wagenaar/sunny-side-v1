@@ -8,6 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import {useMediaQuery} from '@react-hook/media-query'
 import { Header, Text } from '../components/typography';
 import TextWrapper from '../components/textWrapper';
+import theme from '../components/theme';
 
 
 
@@ -31,8 +32,8 @@ const HomePage = () => {
             <GridItem gridOrder={ isMobile ? 3 : 2}>
               <TextWrapper>
                 <Header>Transform your brand</Header>
-                <Text>Lorem impsum</Text>
-                <ButtonSecondary to="#">Learn more</ButtonSecondary>
+                <Text>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do the most of the marketing for you.</Text>
+                <ButtonSecondary to="#" underlineColor={theme.colors.primary.yellow}>Learn more</ButtonSecondary>
               </TextWrapper>
             </GridItem>
             <GridItem gridOrder={ isMobile ? 2 : 3}>
@@ -51,14 +52,14 @@ const HomePage = () => {
               className="fit-container" 
               />
             </GridItem>
-            <GridItem gridOrder={5}>
+            <GridItem gridOrder={5} height="120vw">
               <TextWrapper>
                   <Header>Stand out to the right audience</Header>
-                  <Text>Lorem impsum</Text>
-                  <ButtonSecondary>Learn more</ButtonSecondary>
+                  <Text>Using a collaborative formnula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</Text>
+                  <ButtonSecondary to="#" underlineColor={theme.colors.primary.red}>Learn more</ButtonSecondary>
               </TextWrapper>
             </GridItem>
-            <GridItem gridOrder={6}>
+            <GridItem gridOrder={6} height="150vw">
               <StaticImage 
                 src="../images/image-graphic-design.jpg"
                 alt="Placeholder"

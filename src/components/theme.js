@@ -34,7 +34,7 @@ const basetheme = {
         size: {
             body: '18px',
             header1: '3.5rem',
-            header2: '1.3rem',
+            header2: '2.5rem',
             header3: '1.2rem',
             header4: '1.15rem',
             header5: '1.10rem',

@@ -17,12 +17,6 @@ const GridContainer = styled.main`
             grid-template-columns: 50% 50%;
             grid-template-areas: 
                 "header  header"
-                "item-left item-right"
-                "item-left item-right"
-                "item-left item-right"
-                "item-left item-right"
-                "item-left item-right"
-                "item-left item-right"
                 "footer footer";
         }
     }

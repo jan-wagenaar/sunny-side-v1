@@ -10,8 +10,8 @@ import { Palette } from '../components/palette';
 const Contact = () => {
   return (
       <React.Fragment>
-        <GlobalStyle />
         <Page>
+        <GlobalStyle />
           <GridContainer>
             <Hero>
               <HeroTypography>
@@ -23,6 +23,9 @@ const Contact = () => {
                 placeholder="blurred"
               />
             </Hero>
+            <GridItem>
+              <Palette isPrimary={true} />
+            </GridItem>
             <GridItem>
               <Palette />
             </GridItem>

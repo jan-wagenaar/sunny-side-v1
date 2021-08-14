@@ -22,8 +22,9 @@ const ButtonLink = styled(ButtonBase)`
 
 const ButtonSecondary = styled(ButtonBase)`
   position: relative;
-  padding: ${props => props.theme.spacing.xxs};
+  padding: 0 ${props => props.theme.spacing.s};
   font-family: ${props => props.theme.typography.font.fraunces};
+  font-size:  ${props => props.theme.typography.size.body};
   color: ${props => props.theme.colors.neutral.darkerblue};
 
   &::after {
@@ -32,10 +33,16 @@ const ButtonSecondary = styled(ButtonBase)`
     position: absolute;
     width: 100%;
     height: 8px;
-    bottom: 2px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
     border-radius: ${props => props.theme.shape.rounded};
-    background-color: ${props => props.theme.colors.primary.red};
+    background-color: ${props => props.underlineColor || props.theme.colors.neutral.grayblue};
+    transition: opacity ${props => props.theme.transition.base};
     z-index: -1;
+  }
+  &:hover::after {
+    opacity: 0.9;
   }
 `;
 
