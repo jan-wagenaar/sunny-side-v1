@@ -42,9 +42,16 @@ const FooterLogo=styled(Logo)`
 
 const FooterLinkButton = styled(ButtonBase)`
     color:  ${props => props.theme.colors.primary.cyan};
+    transition: ${props => props.theme.transition.base};
 
     & path {
         fill: ${props => props.theme.colors.primary.darkcyan};
+        transition: ${props => props.theme.transition.base};
+    }
+
+    :hover, :hover path {
+        color: ${props => props.theme.colors.neutral.white};
+        fill: ${props => props.theme.colors.neutral.white};
     }
 `;
 

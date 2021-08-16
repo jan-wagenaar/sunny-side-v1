@@ -38,7 +38,8 @@ const basetheme = {
             header3: '1.2rem',
             header4: '1.15rem',
             header5: '1.10rem',
-            header6: '1.05rem'
+            header6: '1.05rem',
+            small: '0.95rem'
         },
         weight: {
             regular: '400',
@@ -54,7 +55,8 @@ const basetheme = {
         s: '8px',
         m: '16px',
         l: '32px',
-        xl: '64px'
+        xl: '64px',
+        xxl: '100px',
     },
     shape: {
         rounded: '60px'

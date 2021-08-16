@@ -28,13 +28,9 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.xs}) {
+    @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {
         html {
-            font-size: 12px;
-        }
-
-        h1 {
-            font-size: 18px;
+            font-size: 14px;
         }
     }
 `

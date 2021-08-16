@@ -16,7 +16,7 @@ const ButtonLink = styled(ButtonBase)`
   font-weight: ${props => props.theme.typography.weight.regular};
 
   &:hover {
-    color: ${props => props.theme.colors.neutral.darkergrayblue};
+    color: ${props => props.theme.colors.neutral.darkerblue};
   }
 `;
 
@@ -24,7 +24,9 @@ const ButtonSecondary = styled(ButtonBase)`
   position: relative;
   padding: 0 ${props => props.theme.spacing.s};
   font-family: ${props => props.theme.typography.font.fraunces};
-  font-size:  ${props => props.theme.typography.size.body};
+  font-size:  ${props => props.theme.typography.size.small};
+  font-weight: ${props => props.theme.typography.weight.black};
+  text-transform: uppercase;
   color: ${props => props.theme.colors.neutral.darkerblue};
 
   &::after {
@@ -33,11 +35,11 @@ const ButtonSecondary = styled(ButtonBase)`
     position: absolute;
     width: 100%;
     height: 8px;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
-    opacity: 0.3;
+    opacity: 0.25;
     border-radius: ${props => props.theme.shape.rounded};
-    background-color: ${props => props.underlineColor || props.theme.colors.neutral.grayblue};
+    background-color: ${props => props.underlinecolor || props.theme.colors.neutral.grayblue};
     transition: opacity ${props => props.theme.transition.base};
     z-index: -1;
   }
@@ -48,12 +50,13 @@ const ButtonSecondary = styled(ButtonBase)`
 
 const Button = styled(ButtonBase)`
   padding: ${props => props.theme.spacing.m} ${props => props.theme.spacing.l};
-  color: ${props => props.theme.colors.neutral.white};
+  color: ${props => props.theme.colors.neutral.darkerblue};
   font-family: ${props => props.theme.typography.font.fraunces};
   font-weight: ${props => props.theme.typography.weight.semibold};
-  background-color: ${props => props.theme.colors.neutral.lighttransperant};
+  background-color: ${props => props.theme.colors.neutral.white};
 
   :hover {
+    color: ${props => props.theme.colors.neutral.white};
     background-color: ${props => props.theme.colors.neutral.semitransperant};
   }
 `;

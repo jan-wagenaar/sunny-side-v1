@@ -10,7 +10,7 @@ const GridContainer = styled.main`
                 "item-left"
                 "footer";
     
-    margin-top: -10rem;
+    margin-top: -124px;
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
         & {

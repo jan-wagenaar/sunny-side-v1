@@ -15,15 +15,15 @@ const Page = ({children}) => {
             htmlAttributes={{
               lang: 'en',
             }}
-            title={"Test"}
+            title={"Sunnyside"}
             meta={[
               {
                 name: "description",
-                content: "Alex Trost - Front-End Web Developer and Graphic Designer",
+                content: "Sunnyside is a creative design agency that focuses on the bright side of life.",
               },
               {
                 name: "keywords",
-                content: "frontend, developer",
+                content: "agency, creative, digital",
               },
             ]}
             link={[

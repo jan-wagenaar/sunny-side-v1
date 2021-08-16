@@ -41,13 +41,13 @@ const Hero = styled(BackgroundSection)`
   align-items: center;
   grid-area: header;
   width: 100%;
-  height: ${props => props.height || '80vh'};
+  height: ${props => props.height || '100vh'};
   box-sizing: border-box;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
     
-  @media (min-width: ${props => props.theme.breakpoints.md}) {
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
     & {
       height: 50vw;
     }
@@ -55,16 +55,12 @@ const Hero = styled(BackgroundSection)`
 `
 
 const HeroTypography = styled.h1`
-  margin-bottom: ${props => props.theme.spacing.xl};
+  margin-bottom: ${props => props.theme.spacing.xxl};
   font-family: ${props => props.theme.typography.font.fraunces};
   color: ${props => props.theme.colors.neutral.white};
   text-transform: uppercase;
-
-//   @media (max-width: ${props => props.theme.breakpoints.xs}) {
-//     & {
-//         font-size: 12px;
-//     }
-// }
+  letter-spacing: 0.5rem;
+}
 `;
 
 export { Hero, HeroTypography } ;
