@@ -6,6 +6,7 @@ import { Hero, HeroTypography } from '../components/hero';
 import { StaticImage } from 'gatsby-plugin-image';
 import GridItem from '../components/griditem';
 import { Palette } from '../components/palette';
+import GridRow from '../components/gridrow';
 
 const Contact = () => {
   return (
@@ -23,12 +24,14 @@ const Contact = () => {
                 placeholder="blurred"
               />
             </Hero>
-            <GridItem>
-              <Palette isPrimary={true} />
-            </GridItem>
-            <GridItem>
-              <Palette />
-            </GridItem>
+            <GridRow>
+              <GridItem height="auto">
+                <Palette isPrimary={true} />
+              </GridItem>
+              <GridItem height="auto">
+                <Palette />
+              </GridItem> 
+            </GridRow>
             </GridContainer>
             </Page>
       </React.Fragment>

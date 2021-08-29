@@ -3,78 +3,78 @@ import Page from '../components/page';
 import { ButtonSecondary } from '../components/button';
 import GridContainer from '../components/gridcontainer';
 import GridItem from '../components/griditem';
+import GridRow from '../components/gridrow';
 import { Hero, HeroTypography } from '../components/hero';
 import { StaticImage } from 'gatsby-plugin-image';
-import {useMediaQuery} from '@react-hook/media-query';
 import { Header, Text } from '../components/typography';
 import TextWrapper from '../components/textWrapper';
-import theme from '../components/theme';
+import { basetheme } from '../components/theme';
+import { IconWrapper, Arrow } from '../components/icons';
 
-
-
-const HomePage = () => { 
-  const isMobile = useMediaQuery('only screen and (max-width: 960px)');
-  
+ 
+const HomePage = () => {   
   return (
       <React.Fragment>
         <Page>
           <GridContainer>
-            <Hero gridOrder={0}>
+            <Hero>
               <HeroTypography>
                 We are creatives
               </HeroTypography>
-              <StaticImage
-                src="../images/icon-arrow-down.svg"
-                alt="Scroll down"
-                placeholder="blurred"
-              />
+              <Arrow height="100px" width="30px"/>
             </Hero>
-            <GridItem gridOrder={ isMobile ? 3 : 2}>
-              <TextWrapper>
-                <Header>Transform your brand</Header>
-                <Text>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do the most of the marketing for you.</Text>
-                <ButtonSecondary to="#" underlinecolor={theme.colors.primary.yellow}>Learn more</ButtonSecondary>
-              </TextWrapper>
-            </GridItem>
-            <GridItem gridOrder={ isMobile ? 2 : 3}>
-              <StaticImage
-                src="../images/image-transform.jpg"
-                alt="Placeholder"
-                placeholder="blurred"
-                className="fit-container"
-              />
-            </GridItem>
-            <GridItem gridOrder={4}>
-              <StaticImage 
-              src="../images/image-stand-out.jpg"
-              alt="Placeholder"
-              placeholder="blurred"
-              className="fit-container" 
-              />
-            </GridItem>
-            <GridItem gridOrder={5} height="120vw">
-              <TextWrapper>
-                  <Header>Stand out to the right audience</Header>
-                  <Text>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</Text>
-                  <ButtonSecondary to="#" underlinecolor={theme.colors.primary.red}>Learn more</ButtonSecondary>
-              </TextWrapper>
-            </GridItem>
-            <GridItem gridOrder={6} height="150vw">
-              <StaticImage 
-                src="../images/image-graphic-design.jpg"
+            <GridRow isReversed={true}>
+              <GridItem>
+                <TextWrapper>
+                  <Header>Transform your brand</Header>
+                  <Text>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do the most of the marketing for you.</Text>
+                  <ButtonSecondary to="#" underlinecolor={basetheme.colors.primary.yellow}>Learn more</ButtonSecondary>
+                </TextWrapper>
+              </GridItem>
+              <GridItem>
+                <StaticImage
+                  src="../images/image-transform.jpg"
+                  alt="Placeholder"
+                  placeholder="blurred"
+                  className="fit-container"
+                />
+              </GridItem>
+            </GridRow>
+            <GridRow>
+              <GridItem>
+                <StaticImage 
+                src="../images/image-stand-out.jpg"
                 alt="Placeholder"
                 placeholder="blurred"
                 className="fit-container" 
-              />
-            </GridItem>
-            <GridItem gridOrder={7}>
-              <StaticImage 
-                src="../images/image-photography.jpg"
-                alt="Placeholder"
-                placeholder="blurred"
-                className="fit-container" 
-              />
-            </GridItem>
+                />
+              </GridItem>
+              <GridItem>
+                <TextWrapper>
+                    <Header>Stand out to the right audience</Header>
+                    <Text>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</Text>
+                    <ButtonSecondary to="#" underlinecolor={basetheme.colors.primary.red}>Learn more</ButtonSecondary>
+                </TextWrapper>
+              </GridItem>
+            </GridRow>
+            <GridRow>
+              <GridItem>
+                <StaticImage 
+                  src="../images/image-graphic-design.jpg"
+                  alt="Placeholder"
+                  placeholder="blurred"
+                  className="fit-container" 
+                />
+              </GridItem>
+              <GridItem>
+                <StaticImage 
+                  src="../images/image-photography.jpg"
+                  alt="Placeholder"
+                  placeholder="blurred"
+                  className="fit-container" 
+                />
+              </GridItem>
+            </GridRow>
           </GridContainer>
         </Page>
       </React.Fragment>

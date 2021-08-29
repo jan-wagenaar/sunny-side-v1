@@ -35,10 +35,10 @@ const basetheme = {
             body: '18px',
             header1: '3.5rem',
             header2: '2.5rem',
-            header3: '1.2rem',
-            header4: '1.15rem',
-            header5: '1.10rem',
-            header6: '1.05rem',
+            header3: '2rem',
+            header4: '1.25rem',
+            header5: '1.15rem',
+            header6: '1.1rem',
             small: '0.95rem'
         },
         weight: {
@@ -66,4 +66,4 @@ const basetheme = {
     }
 };
 
-export default basetheme;
+export { basetheme };

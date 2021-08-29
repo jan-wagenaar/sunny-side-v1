@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import basetheme from "./theme";
+import { basetheme } from "./theme";
 
 const PaletteWrapper = styled.div`
     display: flex;

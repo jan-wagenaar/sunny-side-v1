@@ -3,16 +3,16 @@ import styled from 'styled-components';
 const GridItem = styled.section`
     position: relative;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
-    order: ${props => props.gridOrder};
     box-sizing: border-box;
     height: ${props => props.height || '100vw'};
     
     @media (min-width: ${props => props.theme.breakpoints.md}) {
       & {
-        height: 50vw;
+        flex: 1;
+        height: ${props => props.height || '50vw;'}
       }
     }
 `;

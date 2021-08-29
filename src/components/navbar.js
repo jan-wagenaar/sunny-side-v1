@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Logo from './logo';
+import Logo from '../images/svg/icon.svg';
 import { ButtonLink, Button } from './button';
 import { Link } from 'gatsby';
-import {useMediaQuery} from '@react-hook/media-query';
 import HamburgerIcon from '../images/svg/icon-hamburger.svg';
 
 const Header = styled.header`
@@ -34,22 +33,23 @@ const Links = styled.ul`
             flex-flow: column;
             align-items: center;
             justify-content: center;
-            margin: 0 ${props => props.theme.spacing.xl};
-            padding: ${props => props.theme.spacing.m};
+            margin: 0 36px;
+            padding: 25px;
             background-color: ${props => props.theme.colors.neutral.body};
+            font-size: ${props => props.theme.typography.size.header4};
             z-index: 100;
         }
 
         &::after {
             content: '';
             position: absolute;
-            top: -15px;
-            right: -10px;
+            top: -12px;
+            right: -8px;
             width: 0;
             height: 0;
-            border-left: 25px solid transparent;
-            border-right: 25px solid transparent;
-            border-bottom: 30px solid ${props => props.theme.colors.neutral.body};
+            border-left: 21px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 25px solid ${props => props.theme.colors.neutral.body};
             transform: rotate(-90deg);
             z-index: 99;
         }
@@ -64,14 +64,18 @@ const LinkItem = styled.li`
 const NavLink = styled(ButtonLink)`
     @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {
         & {
-            color: ${props => props.theme.colors.neutral.darkerblue};
+            color: ${props => props.theme.colors.neutral.darkgrayblue};
         }
     }
 `;
 
 const CTAButton = styled(Button)`
+    text-transform: uppercase;
+
     @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {
         & {
+            margin: ${props => props.theme.spacing.s};
+            font-size: ${props => props.theme.typography.size.header5};
             color: ${props => props.theme.colors.neutral.darkerblue};
             background-color: ${props => props.theme.colors.primary.yellow};
         }

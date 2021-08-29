@@ -1,7 +1,7 @@
 import React from 'react';
 import {ThemeProvider} from 'styled-components';
 import { Helmet } from 'react-helmet';
-import basetheme from './theme';
+import { basetheme, darkTheme } from './theme';
 import GlobalStyle from './globalstyle';
 import NavBar from './navbar';
 import Footer from './footer';
