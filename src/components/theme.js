@@ -23,7 +23,8 @@ const basetheme = {
             darkergrayblue: 'hsl(213, 9%, 39%)',
             white: 'hsl(0, 0%, 100%)',
             lighttransperant: 'hsl(0, 0%, 100%, 20%)',
-            semitransperant: 'hsl(0, 0%, 100%, 40%)'
+            semitransperant: 'hsl(0, 0%, 100%, 40%)',
+            transperant: 'hsl(0, 0%, 0%, 60%)',
         }
     },
     typography: {
@@ -35,10 +36,11 @@ const basetheme = {
             body: '18px',
             header1: '3.5rem',
             header2: '2.5rem',
-            header3: '2rem',
+            header3: '1.5rem',
             header4: '1.25rem',
             header5: '1.15rem',
             header6: '1.1rem',
+            regular: '1rem',
             small: '0.95rem'
         },
         weight: {

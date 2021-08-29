@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
         top: 0;
         height: 100%;
         width: 100%;
+        z-index: -1;
     }
 
     @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {

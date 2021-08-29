@@ -4,8 +4,8 @@ const GridItem = styled.section`
     position: relative;
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: ${props => props.justifyContent || 'center' };
+    align-items: ${props => props.alignItems || 'center' };
     box-sizing: border-box;
     height: ${props => props.height || '100vw'};
     

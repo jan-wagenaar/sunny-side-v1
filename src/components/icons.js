@@ -6,6 +6,7 @@ const IconWrapper = styled.div`
 `;
 
 const Arrow = styled(ArrowIcon)`
+
 `;
 
 export { IconWrapper, Arrow };
