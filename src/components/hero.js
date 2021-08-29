@@ -65,7 +65,7 @@ const HeroTypography = styled.h1`
     & {
       font-size: ${props => props.theme.typography.size.header3};
       text-align: center; 
-      margin-bottom: ${props => props.theme.spacing.m};
+      margin-bottom: ${props => props.theme.spacing.xl};
     }
   }
 `;

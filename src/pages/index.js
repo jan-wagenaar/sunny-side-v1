@@ -23,7 +23,16 @@ const HomePage = () => {
               <HeroTypography>
                 We are creatives
               </HeroTypography>
-              <Arrow height="100px" width="30px"/>
+              <IconWrapper>
+              {/* <StaticImage 
+                src="../images/svg/icon-arrow-down.svg"
+                alt="Placeholder"
+                placeholder="blurred"
+                className="fit-container"
+                /> */}
+                <Arrow viewBox="0 0 60 55" preserveAspectRatio="xMidYMin slice"
+   style={{width: "100%", paddingBottom: "92%", height: "3rem", overflow: "visible"}} />
+              </IconWrapper>
             </Hero>
             <GridRow isReversed={true}>
               <GridItem>
