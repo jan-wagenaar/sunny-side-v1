@@ -49,7 +49,7 @@ const Hero = styled(BackgroundSection)`
     
   @media (max-width: ${props => props.theme.breakpoints.md}) {
     & {
-      height: 42rem;
+      height: 45rem;
     }
   }
 `
@@ -63,7 +63,7 @@ const HeroTypography = styled.h1`
 
   @media (max-width: ${props => props.theme.breakpoints.md}) {
     & {
-      font-size: ${props => props.theme.typography.size.header3};
+      font-size: ${props => props.theme.typography.size.header2};
       text-align: center; 
       margin-bottom: ${props => props.theme.spacing.xl};
     }

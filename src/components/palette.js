@@ -11,6 +11,8 @@ const PaletteWrapper = styled.div`
 const PaletteContainer = styled.div`
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    padding: ${props => props.theme.spacing.m} 0;
 `;
 
 const PaletteItem = styled.div`

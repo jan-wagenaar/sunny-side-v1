@@ -87,16 +87,32 @@ const MenuIcon = styled(HamburgerIcon)`
 `;
 
 const MenuButton = styled.button`
-    display: none;
+    display: block;
     padding: ${props => props.theme.spacing.xs};
     background-color: transparent;
     outline: none; 
     border: none;
     cursor: pointer;
 
-    @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {
+    @media only screen and (min-width: ${props => props.theme.breakpoints.md}) {
         & {
-            display: block;
+            display: none;
+        }
+    }
+`;
+
+const MenuOverlay = styled.div`
+    position: absolute;
+    display: ${props => props.isShow ? 'block' : 'none'};
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+
+    @media only screen and (min-width: ${props => props.theme.breakpoints.md}) {
+        & {
+            display: none;
         }
     }
 `;
@@ -110,18 +126,21 @@ const NavBar = () => {
     }
 
     return (
-        <Header>
-            <Link to="/"><Logo /></Link> 
-            <nav>
-                <Links isOpen={isMenuOpen} >
-                    <LinkItem><NavLink to="/contact">About</NavLink></LinkItem>
-                    <LinkItem><NavLink to="/contact">Services</NavLink></LinkItem>
-                    <LinkItem><NavLink to="/contact">Projects</NavLink></LinkItem>
-                    <LinkItem><CTAButton to="/contact">Contact</CTAButton></LinkItem>
-                </Links>
-                <MenuButton onClick={toggleMenu}><MenuIcon /></MenuButton>
-            </nav>
-        </Header>
+        <>
+            <Header>
+                <Link to="/"><Logo /></Link> 
+                <nav>
+                    <Links isOpen={isMenuOpen} >
+                        <LinkItem><NavLink to="/contact">About</NavLink></LinkItem>
+                        <LinkItem><NavLink to="/contact">Services</NavLink></LinkItem>
+                        <LinkItem><NavLink to="/contact">Projects</NavLink></LinkItem>
+                        <LinkItem><CTAButton to="/contact">Contact</CTAButton></LinkItem>
+                    </Links>
+                    <MenuButton onClick={toggleMenu}><MenuIcon /></MenuButton>
+                </nav>
+            </Header>
+            <MenuOverlay isShow={isMenuOpen} onClick={toggleMenu} />
+        </>
     )
 };
 

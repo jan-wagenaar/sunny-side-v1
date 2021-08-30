@@ -30,7 +30,6 @@ const TestimonialPicture = styled.div`
     height: ${props => props.theme.spacing.xl};
     width: ${props => props.theme.spacing.xl};
     margin: ${props => props.theme.spacing.l} 0;
-    border-radius: 50%;
     overflow: hidden;
 `;
 

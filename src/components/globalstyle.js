@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media only screen and (max-width: ${props => props.theme.breakpoints.md}) {
         html {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 `

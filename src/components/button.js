@@ -24,7 +24,7 @@ const ButtonSecondary = styled(ButtonBase)`
   position: relative;
   padding: 0 ${props => props.theme.spacing.s};
   font-family: ${props => props.theme.typography.font.fraunces};
-  font-size:  ${props => props.theme.typography.size.small};
+  font-size:  ${props => props.theme.typography.size.header5};
   font-weight: ${props => props.theme.typography.weight.black};
   text-transform: uppercase;
   color: ${props => props.theme.colors.neutral.darkerblue};
@@ -46,6 +46,12 @@ const ButtonSecondary = styled(ButtonBase)`
   &:hover::after {
     opacity: 0.9;
   }
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    & {
+      font-size:  ${props => props.theme.typography.size.small};
+    }
+}
 `;
 
 const Button = styled(ButtonBase)`

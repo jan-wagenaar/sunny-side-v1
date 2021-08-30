@@ -5,12 +5,13 @@ const GridRow = styled.div`
     display: flex;
     flex-direction: ${props => props.isReversed ? 'column-reverse' : 'column'};
     ${props => props.alignCenter ? 'align-items: center;' : ''}
-    padding: ${props => props.paddingContainer || props.theme.spacing.none};
+    padding: ${props => props.paddingContainerMobile || props.theme.spacing.none};
 
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
         & {
             flex-direction: ${props => props.isColumn ? 'column' : 'row'};
+            padding: ${props => props.paddingContainer || props.theme.spacing.none};
         }
     }
 `;

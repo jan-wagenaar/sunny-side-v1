@@ -24,18 +24,12 @@ const HomePage = () => {
                 We are creatives
               </HeroTypography>
               <IconWrapper>
-              {/* <StaticImage 
-                src="../images/svg/icon-arrow-down.svg"
-                alt="Placeholder"
-                placeholder="blurred"
-                className="fit-container"
-                /> */}
                 <Arrow viewBox="0 0 60 55" preserveAspectRatio="xMidYMin slice"
-   style={{width: "100%", paddingBottom: "92%", height: "3rem", overflow: "visible"}} />
+                 style={{width: "100%", paddingBottom: "92%", height: "3rem", overflow: "visible"}} />
               </IconWrapper>
             </Hero>
             <GridRow isReversed={true}>
-              <GridItem>
+              <GridItem mobileHeight='28rem'>
                 <TextWrapper>
                   <Header>Transform your brand</Header>
                   <TextSecondary>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do the most of the marketing for you.</TextSecondary>
@@ -60,7 +54,7 @@ const HomePage = () => {
                 className="fit-container" 
                 />
               </GridItem>
-              <GridItem>
+              <GridItem mobileHeight='28rem'>
                 <TextWrapper>
                     <Header>Stand out to the right audience</Header>
                     <TextSecondary>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</TextSecondary>
@@ -69,7 +63,7 @@ const HomePage = () => {
               </GridItem>
             </GridRow>
             <GridRow>
-              <GridItem justifyContent='flex-end'>
+              <GridItem justifyContent='flex-end' mobileHeight='40rem' >
                 <StaticImage 
                   src="../images/image-graphic-design.jpg"
                   alt="Placeholder"
@@ -86,7 +80,7 @@ const HomePage = () => {
                   </TextOverlay>
                 </TextWrapper>
               </GridItem>
-              <GridItem justifyContent='flex-end'>
+              <GridItem justifyContent='flex-end' mobileHeight='40rem' >
                 <StaticImage 
                   src="../images/image-photography.jpg"
                   alt="Placeholder"
@@ -107,12 +101,13 @@ const HomePage = () => {
             <GridRow 
               isColumn 
               alignCenter 
-              paddingContainer={basetheme.spacing.xxl}>                
+              paddingContainer={basetheme.spacing.xxl}
+              paddingContainerMobile={basetheme.spacing.xl}>                
               <Header as="h4" 
                 fontSize={basetheme.typography.size.header4} 
                 fontWeight={basetheme.typography.weight.black}
                 color={basetheme.colors.neutral.grayblue} 
-                fontStretch={'0.3rem'}
+                fontStretch='0.3rem'
                 uppercase
                 textCenter>
                   Client testimonials
@@ -124,13 +119,15 @@ const HomePage = () => {
                       src="../images/image-emily.jpg"
                       alt="Placeholder"
                       placeholder="blurred"
+                      style={{borderRadius: '32px'}}
                       className="fit-container" 
                     />
                   </TestimonialPicture>
                   <Text 
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
-                    margin={basetheme.spacing.xl}>
+                    margin={basetheme.spacing.xl}
+                    marginMobile={basetheme.spacing.s}>
                       We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
                   </Text>
                   <Header 
@@ -151,13 +148,15 @@ const HomePage = () => {
                       src="../images/image-thomas.jpg"
                       alt="Placeholder"
                       placeholder="blurred"
+                      style={{borderRadius: '32px'}}
                       className="fit-container" 
                     />
                   </TestimonialPicture>
                   <Text 
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
-                    margin={basetheme.spacing.xl}>
+                    margin={basetheme.spacing.xl}
+                    marginMobile={basetheme.spacing.s}>
                       Sunnyside's enthusiasm coupled with their keen interest in our brand's succes made it a satisfying and enjoyable experience.
                   </Text>
                   <Header 
@@ -179,13 +178,15 @@ const HomePage = () => {
                       src="../images/image-jennie.jpg"
                       alt="Placeholder"
                       placeholder="blurred"
+                      style={{borderRadius: '32px'}}
                       className="fit-container" 
                     />
                   </TestimonialPicture>
                   <Text 
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
-                    margin={basetheme.spacing.xl}>
+                    margin={basetheme.spacing.xl}
+                    marginMobile={basetheme.spacing.s}>
                       Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
                   </Text>
                   <Header 

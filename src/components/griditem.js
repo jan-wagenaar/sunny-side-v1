@@ -7,7 +7,7 @@ const GridItem = styled.section`
     justify-content: ${props => props.justifyContent || 'center' };
     align-items: ${props => props.alignItems || 'center' };
     box-sizing: border-box;
-    height: ${props => props.height || '100vw'};
+    height: ${props => props.height || props.mobileHeight || '100vw'};
     
     @media (min-width: ${props => props.theme.breakpoints.md}) {
       & {
