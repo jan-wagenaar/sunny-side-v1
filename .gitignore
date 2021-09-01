@@ -3,3 +3,4 @@ node_modules/
 public
 deploy.js
 package-lock.json
+bfg.jargit reset

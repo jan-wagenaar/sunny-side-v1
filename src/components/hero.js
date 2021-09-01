@@ -49,7 +49,7 @@ const Hero = styled(BackgroundSection)`
     
   @media (max-width: ${props => props.theme.breakpoints.md}) {
     & {
-      height: 45rem;
+      height: 40rem;
     }
   }
 `

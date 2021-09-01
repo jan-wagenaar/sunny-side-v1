@@ -127,7 +127,7 @@ const HomePage = () => {
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
                     margin={basetheme.spacing.xl}
-                    marginMobile={basetheme.spacing.s}>
+                    marginMobile={basetheme.spacing.m}>
                       We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
                   </Text>
                   <Header 
@@ -156,7 +156,7 @@ const HomePage = () => {
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
                     margin={basetheme.spacing.xl}
-                    marginMobile={basetheme.spacing.s}>
+                    marginMobile={basetheme.spacing.m}>
                       Sunnyside's enthusiasm coupled with their keen interest in our brand's succes made it a satisfying and enjoyable experience.
                   </Text>
                   <Header 
@@ -186,7 +186,7 @@ const HomePage = () => {
                     textCenter 
                     color={basetheme.colors.neutral.darkergrayblue}
                     margin={basetheme.spacing.xl}
-                    marginMobile={basetheme.spacing.s}>
+                    marginMobile={basetheme.spacing.m}>
                       Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
                   </Text>
                   <Header 
