@@ -4,16 +4,19 @@ import Logo from '../images/svg/icon.svg';
 import { ButtonLink, Button } from './button';
 import { Link } from 'gatsby';
 import HamburgerIcon from '../images/svg/icon-hamburger.svg';
+import throttle from 'lodash.throttle';
 
 const Header = styled.header`
     position: relative;
     display: flex;
     position: sticky;
     top: 0;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
     padding: ${props => props.theme.spacing.l};
+    background-color: ${props => props.isScrolled ? 'hsl(198deg 100% 59% / 75%)' : 'none' };
     z-index: 50;
+    transition: background-color 0.2s ease-out;
 `;
 
 const Links = styled.ul`
@@ -79,6 +82,10 @@ const CTAButton = styled(Button)`
             color: ${props => props.theme.colors.neutral.darkerblue};
             background-color: ${props => props.theme.colors.primary.yellow};
         }
+
+        &:hover, &:focus {
+            background-color: ${props => props.theme.colors.primary.yellow};
+        }
     }
 `;
 
@@ -119,15 +126,45 @@ const MenuOverlay = styled.div`
 
 const NavBar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const scrollOffset = 150;
 
     const toggleMenu = () => {
         const newStatus = !isMenuOpen;
         setMenuOpen(newStatus);
     }
 
+    const handleScroll = () => {
+        if(window.scrollY > scrollOffset) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    }
+    
+
+    const throttledScrollHandler = React.useMemo(
+        () => throttle(handleScroll, 50)
+      , []);
+
+    React.useEffect(() => {
+        if(window.scrollY > scrollOffset) {
+            setIsScrolled(true);
+        }
+        window.addEventListener("scroll", event => {
+            throttledScrollHandler();
+        })
+
+        return () => {
+            throttledScrollHandler.cancel();
+            window.removeEventListener("scroll", event => {});
+        }
+    }, [throttledScrollHandler]);
+
     return (
         <>
-            <Header>
+            <Header isScrolled={isScrolled}>
                 <Link to="/"><Logo /></Link> 
                 <nav>
                     <Links isOpen={isMenuOpen} >
