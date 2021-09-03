@@ -49,6 +49,7 @@ Users should be able to:
 Two pieces of code I'm kinda proud of. 
 
 ```css
+.gallery {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,6 +58,7 @@ Two pieces of code I'm kinda proud of.
     & {
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
+}
 ```
 
 ```js
