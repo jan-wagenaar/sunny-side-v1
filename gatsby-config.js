@@ -27,5 +27,5 @@ module.exports = {
       }
     },
   ],
-  pathPrefix: `/sunny-side-v1`,
+  pathPrefix: `/sunny-side-v1/public`,
 };
