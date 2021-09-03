@@ -27,5 +27,5 @@ module.exports = {
       }
     },
   ],
-  pathPrefix: `/work/gatsby-agency`,
+  pathPrefix: `/sunny-side-v1`,
 };

@@ -1,6 +1,5 @@
 node_modules/
 .cache/
-public
 deploy.js
 package-lock.json
 bfg.jar
